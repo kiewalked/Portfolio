@@ -1,0 +1,129 @@
+---
+import "../styles/global.css";
+import "../styles/base.css";
+import Navigation from "../components/Navigation.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<!doctype html>
+<html lang='en'>
+    <BaseLayout>
+        <div class='background'>
+            <Navigation />
+            <main>
+                <div class='mainpage'>
+                    <div class='intro'>
+                        <h1 class='name'>Hi, I'm Kieran Nguyen</h1>
+                        <h3 class='title'>Budding Software Engineer</h3>
+                        <div class='links'>
+                            <a
+                                href='https://github.com/kiewalked'
+                                class='github'
+                            >
+                                <img
+                                    src='assets/github-mark-white.png'
+                                    alt='Github'
+                                />
+                            </a>
+                            <a
+                                href='https://www.linkedin.com/in/kieran-nguyen-432119245/'
+                                class='linkedin'
+                            >
+                                <img
+                                    src='assets/In-White-128@2x.png'
+                                    alt='LinkedIn'
+                                />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div id='about' class='about'>
+            <h1 class='whoami'>Who Am I?</h1>
+            <p>
+                I'm a recent software engineering graduate from UNSW, looking
+                for my first graduate role as a full stack developer in Web or
+                Mobile development.
+            </p>
+            <p>
+                Outside of programming, I enjoy playing sports (Volleyball,
+                Ultimate & Bouldering are my favourites), reading and teaching.
+            </p>
+            <h3>Favourite Languages & Frameworks</h3>
+            <ul class='languages'>
+                <li class='item'>
+                    <img src='assets/python-logo-only.svg' alt='' />
+                    <p>Python</p>
+                </li>
+                <li class='item'>
+                    <img src='assets/Unofficial_JavaScript_logo_2.svg' alt='' />
+                    <p>Javascript</p>
+                </li>
+                <li class='item'>
+                    <img src='assets/ISO_C++_Logo.svg' alt='' />
+                    <p>C++</p>
+                </li>
+                <li class='item'>
+                    <img src='assets/HTMLCSS.png' alt='' />
+                    <p>HTML & CSS</p>
+                </li>
+            </ul>
+        </div>
+        <div class='projects'>
+            <h1 class='heading'>My favourite work</h1>
+            <div class='card-grid'>
+                <a href='./projects/thesis' class='card thesis-project'>
+                    <img class='image' src='assets/random.jpg' alt='' />
+                    <div class='title'>Thesis Project</div>
+                    <div class='summary'></div>
+                    <div class='overlay'>
+                        <div class='shadow-container'>
+                            <div class='shadow'></div>
+                        </div>
+                        <div class='content'>
+                            A mobile application to assist early-stage psychosis
+                            patients with physical health management.
+                        </div>
+                    </div>
+                </a>
+                <a href='' class='card portfolio'>
+                    <img class='image' src='assets/random.jpg' alt='' />
+                    <div class='title'>Portfolio</div>
+                    <div class='summary'></div>
+                    <div class='overlay'>
+                        <div class='shadow'></div>
+                        <div class='content'>
+                            A static webpage to display my projects and practice
+                            my web development/CSS skills.
+                        </div>
+                    </div>
+                </a>
+                <a href='' class='card uni'>
+                    <img class='image' src='assets/random.jpg' alt='' />
+                    <div class='title'>University Projects</div>
+                    <div class='summary'></div>
+                    <div class='overlay'>
+                        <div class='shadow'></div>
+                        <div class='content'>
+                            Some of my favourite projects completed as part of
+                            my University degree
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class='footer'>
+            Photo by
+            <a
+                href='https://unsplash.com/@sabrituzcu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'
+                >Sabri Tuzcu</a
+            >
+             on
+            <a
+                href='https://unsplash.com/photos/wunVFNvqhfE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'
+                >Unsplash</a
+            >
+        </div>
+    </BaseLayout>
+</html>

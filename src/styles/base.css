@@ -1,0 +1,26 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.background {
+    background-image: url("./assets/background.jpg");
+    background-size: 1920px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
+body {
+    background-color: rgba(38, 38, 38, 1);
+    color: #d1d5db;
+}
+
+.card-grid a {
+    color: #d1d5db;
+    text-decoration: none;
+}

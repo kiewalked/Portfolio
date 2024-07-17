@@ -1,0 +1,50 @@
+---
+import BlogPreview from "../components/BlogPreview.astro";
+import Navigation from "../components/Navigation.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const allPosts = await Astro.glob("./posts/*.md");
+console.log("allPosts: ", allPosts);
+---
+
+<BaseLayout>
+    <Navigation />
+    <div class='blog-content'>
+        <h1>Blog</h1>
+        <div class='post'></div>
+        <ul>
+            {
+                allPosts.map((post) => (
+                    <BlogPreview
+                        img={post.frontmatter.image.url}
+                        url={post.url}
+                        title={post.frontmatter.title}
+                        description={post.frontmatter.description}
+                        author={post.frontmatter.author}
+                        pubDate={post.frontmatter.pubDate}
+                        cover={post.frontmatter.cover}
+                    />
+                ))
+            }
+        </ul>
+    </div>
+</BaseLayout>
+
+<style>
+    .blog-content {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 80ch;
+        padding: 1rem;
+        line-height: 1.5;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .post {
+    }
+
+    a {
+        color: white;
+    }
+</style>

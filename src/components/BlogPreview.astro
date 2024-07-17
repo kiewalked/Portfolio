@@ -1,0 +1,40 @@
+---
+const { url, title, author, pubDate, description, img, cover } = Astro.props;
+console.log('cover:', cover);
+---
+
+<a href={url}>
+  <img src={cover} alt='placeholder' />
+  <div class='info'>
+    <h3>{title}</h3>
+    <div class='author'>
+      <time>{pubDate.slice(0, 10)}</time>
+      <p>{author}</p>
+    </div>
+    <p>{description}</p>
+  </div>
+</a>
+
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  a img {
+    min-width: 12rem;
+    margin-right: 1rem;
+  }
+  .info {
+  }
+  .author {
+    opacity: 0.7;
+    display: flex;
+    gap: 0.5rem;
+  }
+</style>

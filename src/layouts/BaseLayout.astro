@@ -1,0 +1,17 @@
+---
+import "../styles/base.css";
+import "../styles/global.css";
+---
+
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Kieran Nguyen</title>
+    <meta name='generator' content={Astro.generator} />
+</head>
+<body>
+    <slot />
+    <script>
+        import "../scripts/menu.js";
+    </script>
+</body>

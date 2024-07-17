@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "./Navigation.astro";
+import "../styles/global.css";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout>
+    <Navigation />
+    <div class='content'>
+        <a class='close-button' href='/blog'>
+            <div class='button-box'>
+                <span>&#10005;</span>
+            </div>
+        </a>
+        <div class='article'>
+            <div class='heading'>
+                <h1>{frontmatter.title}</h1>
+                <em>
+                    Written by {frontmatter.author} on {
+                        frontmatter.pubDate.slice(0, 10)
+                    }
+                </em>
+            </div>
+            <div class='markdown-content'>
+                <slot />
+            </div>
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+    .content {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100ch;
+        line-height: 1.5;
+        border-radius: 10px;
+        border: 1px solid whitesmoke;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .article {
+        padding: 2rem 8rem 2rem 8rem;
+    }
+    .heading {
+        text-align: center;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .heading em {
+        margin: 0;
+        opacity: 0.6;
+    }
+</style>
+
+<style is:global>
+    .markdown-content h2 {
+        margin: 1.5rem;
+    }
+
+    .markdown-content p {
+        margin: 1.5rem;
+    }
+    .markdown-content li {
+        list-style-position: inside;
+        margin: 0 1.5rem 0rem 1.5rem;
+    }
+</style>
