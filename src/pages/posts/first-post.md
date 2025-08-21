@@ -4,7 +4,7 @@ title: 'Hello World!'
 pubDate: 2023-09-06
 description: 'Welcome to my blog :)'
 author: 'Kieran Nguyen'
-cover: '../pages/posts/helloworld.webp'
+cover: '/assets/helloworld.webp'
 image:
   url: 'https://docs.astro.build/assets/full-logo-light.png'
   alt: 'The full Astro logo.'
